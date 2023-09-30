@@ -1,0 +1,46 @@
+<Schema name="New Schema1">
+  <Dimension type="StandardDimension" visible="true" name="Dim_renta">
+    <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true">
+      <Table name="dim_renta">
+      </Table>
+      <Level name="Renta" visible="true" table="dim_renta" column="id_renta" nameColumn="renta_fecha" type="Date" uniqueMembers="true" levelType="Regular">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" name="Dim_pelis">
+    <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true">
+      <Table name="dim_pelis">
+      </Table>
+      <Level name="Peliculas" visible="true" table="dim_pelis" column="id_peli" nameColumn="nombre_peli" type="String" uniqueMembers="true" levelType="Regular">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" foreignKey="id_cliente" name="Dim_clientes">
+    <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true">
+      <Table name="dim_clientes" alias="">
+      </Table>
+      <Level name="Clientes" visible="true" table="dim_clientes" column="id_cliente" nameColumn="nombre_cliente" type="String" uniqueMembers="true" levelType="Regular">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" name="Dim_fecha">
+    <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true">
+      <Table name="dim_fecha" alias="">
+      </Table>
+      <Level name="Fecha" visible="true" table="dim_fecha" column="id_fecha" nameColumn="dim_fecha" type="String" uniqueMembers="true" levelType="Regular">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" name="Categorias">
+    <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true">
+      <Table name="dim_categorias" alias="">
+      </Table>
+      <Level name="Categorias" visible="true" table="dim_categorias" column="id_categorias" nameColumn="nombre_categorias" type="String" uniqueMembers="true" levelType="Regular">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Cubo_Sakila_1" visible="true" cache="true" enabled="true">
+    <Table name="Table" alias="">
+    </Table>
+  </Cube>
+</Schema>
